@@ -41,22 +41,9 @@
 
 # target_link_libraries(sdl2 INTERFACE SDL2 SDL2main)
 
-# add_library(imgui STATIC)
-
-# target_include_directories(imgui PUBLIC imgui)
-
-# target_sources(imgui PRIVATE 
-#     imgui/imgui.h
-#     imgui/imgui.cpp
-
-#     imgui/imgui_demo.cpp
-#     imgui/imgui_draw.cpp
-#     imgui/imgui_widgets.cpp
-
-#     imgui/imgui_impl_vulkan.cpp
-#     imgui/imgui_impl_sdl.cpp
-#     )
-
-# target_link_libraries(imgui PUBLIC Vulkan::Vulkan sdl2)
-
 # target_include_directories(stb_image INTERFACE stb_image)
+
+set(SDL_STATIC on)
+add_subdirectory(sdl)
+
+add_subdirectory(imgui)
